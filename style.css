@@ -1,0 +1,105 @@
+/* Write your styles here  */
+#header{
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+#doctors{
+     display:grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: auto;
+     gap:20px;
+     width:80%;
+     margin: auto;
+     padding-top: 20px;
+     
+    }
+    #doctors>div{
+      border: 0px solid red;
+      text-align: center;
+      padding:0px 00px 20px 0px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #doctors>div>img{
+      width:100%;
+    }
+    p+div{
+      display: flex;
+      justify-content: space-around;
+     
+    } 
+    p+div>button:first-child{
+      background-color: #f8f8f8;
+      color: #a4d1dd;
+      font-size: 14px;
+      width: 35%;
+      border-radius: 10px;
+      border:0px;
+      padding: 10px;
+    }
+    p+div>button:last-child{
+      background-color: #ff907a;
+      color: #f8f8f8;
+      font-size: 14px;
+      width: 40%;
+      border-radius: 15px;
+      border:0px;
+    }
+    /* <!-- Bottom section  --> */
+    #service{
+      display:grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: auto;
+     gap:20px;
+     width: 80%;
+     margin: auto;
+    }
+    #service>div{
+      border: 0px solid red;
+      text-align: center;
+      padding:50px 0px 0px 0px;
+    }
+
+/* keep media queries at the bottom */
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+  #header{
+       width: 90%;
+  }
+  #doctors{
+    grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: auto;
+     width: 90%;
+  }
+  #service{
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: auto;
+   width:90%;
+  }
+  #service>div{
+    text-align: center;
+
+  }
+
+}
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #header{
+    width: 100%;
+    
+}
+#doctors{
+  grid-template-columns: repeat(1, 1fr);
+   grid-template-rows: auto;
+   width: 100%;
+}
+#service{
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  width:100%;
+ }
+ #service>div{
+   text-align: center;
+  
+ }
+}
